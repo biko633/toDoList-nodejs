@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const port = process.env.PORT || 3001;
 const router = express.Router();
 const _ = require('lodash');
 require('dotenv').config();
@@ -161,6 +162,5 @@ app.get("/about", function(req, res){
 
 
 
-app.listen(3000, function() {
-    console.log("Server is running on port 3000.");
-});
+app.listen(port, () => console.log("Server Started"));
+
